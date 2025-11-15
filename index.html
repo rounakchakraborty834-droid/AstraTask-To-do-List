@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AstraTask — Smart To-Do & Productivity</title>
+  <meta name="description" content="AstraTask — polished productivity app by Rounak" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<!-- LOGIN / SIGNUP MODAL -->
+<div id="authModal" class="auth-modal-overlay" aria-hidden="true">
+  <div class="auth-modal-box">
+
+    <!-- Close button -->
+    <button id="closeAuth" class="auth-close">✕</button>
+
+    <!-- Login Form -->
+    <div id="loginFormBox" class="auth-box active">
+      <h2 class="auth-title">Login</h2>
+      <form class="loginForm">
+        <div class="profileImage"><i class="fa fa-user-circle-o"></i></div>
+
+        <div class="form-group">
+          <i class="fa fa-envelope form-icon"></i>
+          <input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+          <i class="fa fa-lock form-icon"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+
+        <button type="submit" class="auth-btn">Login</button>
+
+        <p class="switch-auth">
+          Don't have an account? <span data-open="signup">Sign Up</span>
+        </p>
+      </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signupFormBox" class="auth-box">
+      <h2 class="auth-title">Sign Up</h2>
+      <form class="signupForm">
+        <div class="profileImage"><i class="fa fa-user-circle-o"></i></div>
+
+        <div class="form-group">
+          <i class="fa fa-envelope form-icon"></i>
+          <input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+          <i class="fa fa-lock form-icon"></i>
+          <input type="password" placeholder="Password" required>
+        </div>
+
+        <div class="form-group">
+          <i class="fa fa-lock form-icon"></i>
+          <input type="password" placeholder="Retype Password" required>
+        </div>
+
+        <button type="submit" class="auth-btn">Create Account</button>
+
+        <p class="switch-auth">
+          Already have an account? <span data-open="login">Login</span>
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<body>
+  <!-- Top progress bar -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="https://rounak-portfolio.lovable.app" title="Rounak Portfolio (opens in new tab)" target="_blank" rel="noopener">
+        <img src="assets/logo.png" alt="AstraTask logo" id="siteLogo">
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+        <ul id="navList" class="nav-list">
+          <li><a href="#home" data-target="#home">Home</a></li>
+          <li><a href="#features" data-target="#features">Features</a></li>
+          <li><a href="#how" data-target="#how">How it works</a></li>
+          <li><a href="#gallery" data-target="#gallery">Gallery</a></li>
+          <li><a href="#pricing" data-target="#pricing">Pricing</a></li>
+          <li><a href="#contact" data-target="https://rounak-portfolio.lovable.app">Contact</a></li>
+          <li class="nav-auth">
+  <button id="openLogin" class="btn ghost small">Login</button>
+</li>
+<li class="nav-auth">
+  <button id="openSignup" class="btn primary small">Sign Up</button>
+</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>AstraTask — home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- LOADER (full-screen) -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-brand">Rounak</div>
+      <div class="loader-sub">AstraTask — made by Rounak</div>
+      <div class="loader-progress">
+        <span class="loader-bar"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WELCOME overlay (after loader) -->
+  <div id="welcome" class="welcome hidden" aria-hidden="true">
+    <div class="welcome-inner">
+      <h1 class="welcome-title">Welcome to AstraTask</h1>
+      <p class="welcome-sub">Your next-gen productivity assistant</p>
+      <div class="welcome-actions">
+        <a href="#features" id="exploreBtn" class="btn primary">Explore Features</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO 3D (Spline) — below header, the real hero (initially hidden) -->
+  <section id="home" class="hero-3d hidden" aria-hidden="true">
+    <div class="hero-3d-frame">
+      <!-- iframe is lazy — set data-src, JS will swap to src on reveal -->
+      <iframe id="splineIframe"
+        data-src="https://my.spline.design/r4xbot-sjP3VMzSfRiWGA5q1bvTKcC8/"
+        title="AstraTask 3D"
+        frameborder="0"
+        allow="fullscreen; vr"
+        loading="lazy"
+        class="hero-3d-iframe"
+      ></iframe>
+    </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- rest of your page (features, how, gallery...) -->
+  <main id="main">
+    <!-- Example features section placeholder -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Features</h2>
+        <p>Feature content goes here...</p>
+      </div>
+    </section>
+
+    <!-- (other sections omitted for brevity) -->
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
+    
+    <!-- HERO -->
+    <section id="home" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <h1>AstraTask — Focused. Fast. Flawless.</h1>
+          <p class="lead">A productivity-first to-do app built for clarity and speed. Offline-friendly, keyboard-driven and delightfully simple.</p>
+          <div class="hero-actions">
+            <a class="btn primary" data-scroll="#features">See features</a>
+            <button class="btn ghost" id="openDemo">Live demo</button>
+          </div>
+
+          <div class="quotes">
+            <div class="quote active">“Focus beats time — AstraTask keeps you on track.” — Product Manager</div>
+            <div class="quote">“Simplest workflow that actually improves productivity.” — Designer</div>
+            <div class="quote">“Beautiful, tiny interactions that make a big impact.” — Developer</div>
+          </div>
+        </div>
+
+        <div class="hero-image reveal">
+          <!-- user-supplied hero image -->
+          <div class="hero-img-wrap">
+            <img src="assets/hero.jpg" alt="Rounak - hero" id="heroPhoto">
+            <div class="hero-badge">AstraTask</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-orb" aria-hidden="true"></div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section features">
+      <div class="container">
+        <h2 class="section-title reveal">Powerful features — simplified</h2>
+        <p class="section-sub reveal">Everything you need to get things done without friction.</p>
+
+        <div class="grid-3">
+          <article class="card reveal">
+            <h3>Quick capture</h3>
+            <p>Start typing: use <code>#tag @due:YYYY-MM-DD !high /pomo</code> to add structured tasks fast.</p>
+            <button class="btn ghost small demo-btn" data-action="sampleAdd">Try sample add</button>
+          </article>
+
+          <article class="card reveal">
+            <h3>Offline & Local-first</h3>
+            <p>Local storage keeps data with you; import/export JSON for backups.</p>
+            <button class="btn ghost small" id="exportState">Export JSON</button>
+          </article>
+
+          <article class="card reveal">
+            <h3>Calendar & Email</h3>
+            <p>Export to calendar (.ics) and open mail clients with prefilled reminders.</p>
+            <button class="btn ghost small" id="generateICS">Export ICS sample</button>
+          </article>
+        </div>
+
+        <!-- chart area -->
+        <div class="chart-wrap reveal">
+          <canvas id="featuresChart" width="700" height="320" aria-label="Usage chart"></canvas>
+        </div>
+
+        <div class="counters reveal">
+          <div><strong class="count" data-target="1250">0</strong><span>Users helped</span></div>
+          <div><strong class="count" data-target="12">0</strong><span>Integrations</span></div>
+          <div><strong class="count" data-target="98">0</strong><span>Task templates</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section id="how" class="section how">
+      <div class="container">
+        <h2 class="section-title reveal">How it works</h2>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <div class="step-body"><h4>Capture</h4><p>Quick add, inline tags and due dates.</p></div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">2</div>
+            <div class="step-body"><h4>Focus</h4><p>Start timers, focus mode and minimal distractions.</p></div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">3</div>
+            <div class="step-body"><h4>Export</h4><p>Calendar export, JSON backup and shareable snapshots.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <h2 class="section-title reveal">Screenshots & mockups</h2>
+        <p class="section-sub reveal">Drop your screenshots into <code>assets/shot1.png</code> ... to show them here.</p>
+
+        <div class="gallery-grid">
+          <div class="shot reveal"><img src="assets/shot1.png" alt="screenshot 1"></div>
+          <div class="shot reveal"><img src="assets/shot2.png" alt="screenshot 2"></div>
+          <div class="shot reveal"><img src="assets/shot3.png" alt="screenshot 3"></div>
+          <div class="shot reveal"><img src="assets/shot4.png" alt="screenshot 4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section pricing">
+      <div class="container">
+        <h2 class="section-title reveal">Simple pricing</h2>
+        <p class="section-sub reveal">Transparent plans for individuals and teams.</p>
+
+        <div class="grid-3">
+          <div class="plan card reveal">
+            <h3>Free</h3>
+            <p class="price">Free</p>
+            <ul>
+              <li>Core features</li>
+              <li>Local storage</li>
+            </ul>
+            <button class="btn primary buy-btn" data-plan="free">Get started</button>
+          </div>
+
+          <div class="plan card popular reveal">
+            <div class="badge">Popular</div>
+            <h3>Pro</h3>
+            <p class="price">$5 / month</p>
+            <ul>
+              <li>Sync across devices</li>
+              <li>Calendar export</li>
+            </ul>
+            <button class="btn primary buy-btn" data-plan="pro">$5 / month</button>
+          </div>
+
+          <div class="plan card reveal">
+            <h3>Team</h3>
+            <p class="price">$20 / month</p>
+            <ul>
+              <li>Multi-user collaboration</li>
+              <li>Priority support</li>
+            </ul>
+            <button class="btn primary buy-btn" data-plan="team">Contact sales</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title reveal">Get in touch</h2>
+        <form id="contactForm" class="contact-form reveal" novalidate>
+          <div class="grid-2">
+            <input name="name" placeholder="Your name" required />
+            <input name="email" placeholder="Email" type="email" required />
+          </div>
+          <textarea name="message" rows="5" placeholder="Message" required></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send message</button>
+            <button type="button" id="clearForm" class="btn ghost">Clear</button>
+          </div>
+          <div id="formMsg" role="status" aria-live="polite" class="form-msg"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="https://rounak-portfolio.lovablr.app" target="_blank" rel="noopener" class="footer-logo-link" aria-label="Rounak portfolio">
+          <img src="assets/logo.png" alt="AstraTask logo" class="footer-logo">
+        </a>
+        <div class="brand-meta">
+          <div class="brand-name">AstraTask</div>
+          <div class="brand-sub">Designed &amp; built by Rounak</div>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://rounak-portfolio.lovable.app">Contact</a>
+      </nav>
+
+      <div class="footer-socials">
+        <a class="social-link" href="https://www.github.com/rounakchakraborty834-droid" target="_blank" rel="noopener" aria-label="GitHub">
+          <span class="social-icon-wrap"><img src="assets/github.png" alt="" class="social-icon"></span>
+          <span class="social-text">GitHub</span>
+        </a>
+
+        <a class="social-link" href="https://www.linkedin.com/in/rounak-chakraborty-b55378369" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <span class="social-icon-wrap"><img src="assets/linkedin.png" alt="" class="social-icon"></span>
+          <span class="social-text">LinkedIn</span>
+        </a>
+
+        <a class="social-link" href="https://rounak-portfolio.lovablr.app" target="_blank" rel="noopener" aria-label="Website">
+          <span class="social-icon-wrap"><img src="assets/website.png" alt="" class="social-icon"></span>
+          <span class="social-text">Portfolio</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">© <span id="year"></span> AstraTask — All rights reserved. Designed and managed by Rounak:)</div>
+      <div class="small-note">Built with Skills • Minimal, fast & offline-friendly</div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Modal (demo) -->
+  <div id="demoModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel" role="document">
+      <button id="closeModal" class="modal-close" aria-label="Close demo">✕</button>
+      <h3>Quick Demo</h3>
+      <p>This demo is interactive: try pricing buttons, export JSON, or add sample tasks with the sample add button.</p>
+      <pre id="demoOut" style="background:#07101a;padding:10px;border-radius:8px;color:#a8b0bd;"></pre>
+      <div class="modal-actions"><button class="btn primary" id="modalOk">Awesome</button></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
